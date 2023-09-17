@@ -1,0 +1,32 @@
+import random
+import math
+print("\t \n \n\t \t *******NUMBER GUESSING GAME*******\t \t \t")
+print("\t \n \n \t \t *******THERE  ARE SOME RULES******\t \t \t ")
+print("\t \n \t.RULE 1: \t \t ")
+print("\t \n \tYOU HAVE LIMITED CHANCES\t \t ")
+print("\t \n \tRULE 2: \t \t ")
+print("\t \n \tYOU HAVE TO ENTER THE NUMBER WITHIN THE RANGE\t \t ")
+print("\t \n \tDON'T GET DISHEARTED IF YOU LOSE")
+print("\t \n \tGOOD LUCK\t \t ")
+print("\t \n \tlet's  try\t \t ")
+
+lower=int(input("Enter a lower bound: "))
+upper=int(input("Enter a upper bound: "))
+num= random.randint(lower,upper)
+print("  \n \tYOU HAVE",round(math.log(upper-lower+1,2)),"CHANCES FOR GAME")
+count=0
+while count < round(math.log(upper-lower+1,2)):
+    count+=1
+    guess=int(input("\n Enter your guess:- "))
+    if num==guess:
+        print("\n Congratulations! you did it in",count,"attempt")
+    elif num < guess:
+        print("\n oops! you entered too high ")
+    elif num > guess:
+        print ("\n oho! you entered too low")
+print("\n The number is",num)
+print("\n \t\t YOUR ATTEMPTS ARE ALL GONE")
+print("\n \t\t BETTER LUCK NEXT TIME")
+
+
+
